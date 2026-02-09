@@ -1,1 +1,165 @@
-/* Add your CSS here */
+/* Import Lexend font from Google Fonts (simple and beginner-friendly) */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+  /* Use Lexend from Google Fonts, with fallbacks */
+  font-family: 'Lexend', Arial, sans-serif;
+  background-color: #f4f4f4;
+  font-size: 16px;
+  color: #0b1f3a;
+  line-height: 1.5;
+}
+ 
+h1{
+  font-size: 40px;
+}
+
+h2{
+  font-size: 20px;
+}
+
+h3{
+  font-size: 15px;
+}
+
+/* Header / Hero section */
+header {
+  /* Dark blue to light blue gradient */
+  background: linear-gradient(135deg, #0b1f3a, #0e3a7b, #2a7ac7);
+  color: #ffffff;
+  text-align: center;
+  padding: 40px 20px 48px;
+}
+
+header img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+header p {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #e6f1ff;
+}
+
+/* Timeline layout: horizontal scroll with flexbox */
+.timeline-cards {
+  display: flex;
+  gap: 16px;
+  padding: 28px 20px 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+/* Individual timeline card */
+.timeline-cards > div {
+  position: relative;
+  flex: 0 0 260px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(11, 31, 58, 0.15);
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+.timeline-cards h2 {
+  padding: 14px 14px 4px;
+  color: #0e3a7b;
+}
+
+.timeline-cards h3 {
+  padding: 0 14px 10px;
+  color: #1a2b4d;
+}
+
+.timeline-cards img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay that appears on hover or focus */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(7, 20, 40, 0.85);
+  color: #f5f9ff;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Show overlay when the card is hovered */
+.timeline-cards > div:hover .overlay {
+  opacity: 1;
+}
+
+/* Show overlay when the card or its children are focused */
+.timeline-cards > div:focus-within .overlay {
+  opacity: 1;
+}
+
+/* Bottom helper paragraph */
+body > p {
+  text-align: center;
+  padding: 18px 12px 32px;
+  color: #22406b;
+}
+
+/* Simple centered container for page content */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+
+/* Responsive: stack and simplify on small screens */
+@media (max-width: 600px) {
+  header {
+    padding: 16px 12px; /* Less padding on small screens */
+  }
+
+  header img {
+    width: 96px; /* Smaller logo on phones */
+  }
+
+  header h1{
+    font-size: 32px; /* Smaller title on phones */
+  }
+
+  header p {
+    font-size: 16px; /* Smaller description on phones */
+  }
+
+  .timeline-cards {
+    padding: 20px 12px 8px;
+    gap: 12px;
+  }
+
+  .timeline-cards > div {
+    flex: 0 0 220px; /* Narrower cards on phones */
+  }
+
+  .timeline-cards img {
+    height: 150px; /* Shorter images on phones */
+  }
+}
