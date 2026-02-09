@@ -60,10 +60,11 @@ header p {
 .timeline-cards {
   display: flex;
   gap: 80px;
-  padding: 80px 20px 80px;
+  padding: 80px 30px 80px;
   margin: 0 20px 0;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+
 }
 
 /* Individual timeline card */
