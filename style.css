@@ -76,6 +76,7 @@ header p {
   box-shadow: 0 6px 16px rgba(11, 31, 58, 0.15);
   overflow: hidden;
   scroll-snap-align: start;
+  transition: transform 0.35s ease;
 }
 
 /* Make the Small cards larger than the others */
@@ -112,21 +113,19 @@ header p {
   display: flex;
   align-items: center;
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.35s ease;
 }
 
 /* Slight scale up on hover/focus for all cards */
 .timeline-cards .card:hover,
 .timeline-cards .card:focus-within {
   transform: scale(1.10);
-  transition: transform 0.2s ease;
 }
 
 /* Show overlay when the card is hovered */
 .timeline-cards .card:hover .overlay,
 .timeline-cards .card:focus-within .overlay {
   opacity: 1;
-  transition: opacity 0.2s ease;
 }
 
 /* Make the SMALL ID card scale a bit more than the others */
@@ -217,14 +216,14 @@ body > p {
   .timeline-cards .card:hover,
   .timeline-cards .card:focus-within {
     transform: scale(1.00);
-    transition: transform 0.2s ease;
+    transition: transform 0.35s ease;
   }
 
   /* Show overlay when the card is hovered */
   .timeline-cards .card:hover .overlay,
   .timeline-cards .card:focus-within .overlay {
     opacity: 1;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.35s ease;
   }
 
   /* Make the SMALL ID card scale a bit more than the others */
